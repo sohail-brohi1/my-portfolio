@@ -59,7 +59,7 @@ export default function ExperiencePage() {
               <p className="text-gray-400 text-lg mb-12 leading-relaxed font-medium">
                 I believe that professional growth is a continuous cycle of
                 learning, implementing, and refining. Whether as an ASE or a
-                Full Stack Developer, my core mission remains providing scalable
+                Full Stack Engineer, my core mission remains providing scalable
                 solutions that outperform and outlast the status quo.
               </p>
             </motion.div>

@@ -4,16 +4,18 @@ import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Contact from "@/components/sections/Contact";
+import Process from "@/components/sections/Process";
+import Stats from "@/components/sections/Stats";
 import Footer from "@/components/ui/Footer";
-import LoadingScreen from "@/components/ui/LoadingScreen";
 
 export default function Home() {
   return (
     <>
-      <LoadingScreen />
       <Hero />
       <About />
+      <Stats />
       <Skills />
+      <Process />
       <Projects />
       <Experience />
       <Contact />

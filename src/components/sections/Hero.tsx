@@ -9,89 +9,98 @@ import Typewriter from "@/components/ui/Typewriter";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto flex items-center justify-center overflow-hidden">
-      <div className="container-custom z-10 [perspective:1200px]">
+    <section className="relative w-full h-screen mx-auto flex items-center justify-center overflow-hidden bg-[#050505]">
+      <div className="container-custom z-10 perspective-distant">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <Text3D tiltStrength={12} className="relative z-10">
             <div className="max-w-6xl">
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-primary font-mono tracking-[0.4em] mb-4 uppercase text-sm md:text-base font-bold"
+                className="flex items-center gap-3 mb-8"
               >
-                {personalInfo.role}
-              </motion.p>
+                <span className="w-8 h-px bg-primary" />
+                <p className="text-primary font-mono tracking-[0.4em] uppercase text-[10px] md:text-xs font-black">
+                  {personalInfo.role}
+                </p>
+              </motion.div>
 
-              <div className="text-6xl md:text-9xl font-black leading-[0.85] mb-8 tracking-tighter cursor-default select-none">
+              <div className="text-6xl md:text-[10rem] font-black leading-[0.8] mb-12 tracking-[-0.04em] cursor-default select-none text-white">
                 <div className="flex flex-wrap items-center">
-                  <AutoWriter text="HI, I'M&nbsp;" className="text-white" />
                   <AutoWriter
-                    text={personalInfo.name.split(" ")[0].toUpperCase()}
-                    className="text-primary"
+                    text="HI, I'M&nbsp;"
+                    className="text-white opacity-20"
+                  />
+                  <AutoWriter
+                    text={personalInfo.name.split(" ")[1].toUpperCase()}
+                    className="text-white"
                     delay={0.1}
                   />
                   <AutoWriter text="." className="text-primary" />
                 </div>
 
-                <div className="min-h-[1.1em] py-2">
+                <div className="min-h-[1.1em] py-4">
                   <Typewriter
-                    texts={["INNOVATING", "BUILDING", "SCALING", "CRAFTING"]}
-                    className="text-transparent bg-clip-text bg-linear-to-r from-primary via-secondary to-accent neon-glow leading-normal"
-                    delay={150}
-                    pause={2500}
+                    texts={[
+                      "ARCHITECTING",
+                      "ENGINEERING",
+                      "PRODUCTION",
+                      "INTERFACE",
+                    ]}
+                    className="text-white"
+                    delay={100}
+                    pause={2000}
                   />
                 </div>
 
                 <Typewriter
-                  texts={[
-                    "SOLUTIONS.",
-                    "THE FUTURE.",
-                    "WEB APPS.",
-                    "EXPERIENCES.",
-                  ]}
-                  className="text-white"
-                  delay={150}
-                  pause={2500}
+                  texts={["SYSTEMS.", "SOLUTIONS.", "SOFTWARE.", "EXPERIENCE."]}
+                  className="text-gray-800"
+                  delay={100}
+                  pause={2000}
                   cursor={false}
                 />
               </div>
 
               <motion.p
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
-                className="text-gray-400 text-lg md:text-2xl max-w-3xl mb-12 leading-relaxed font-medium"
+                className="text-gray-500 text-lg md:text-xl max-w-2xl mb-16 leading-relaxed font-medium"
               >
-                {personalInfo.headline}. Specializing in building scalable web
-                and mobile applications with cutting-edge tech.
+                Independent software engineer focusing on building
+                high-performance web architectures and immersive digital
+                experiences for contemporary brands.
               </motion.p>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.5 }}
-                className="flex flex-wrap gap-8"
+                className="flex flex-wrap gap-12"
               >
                 <a
                   href="#projects"
-                  className="bg-primary text-background px-12 py-5 rounded-full font-black text-sm tracking-widest uppercase flex items-center gap-3 hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(0,242,255,0.4)] hover:shadow-[0_0_50px_rgba(0,242,255,0.6)] group"
+                  className="relative group flex items-center gap-4 text-white font-black text-xs tracking-widest uppercase overflow-hidden"
                 >
-                  View Work{" "}
+                  <span className="pb-1 border-b-2 border-primary group-hover:border-white transition-colors duration-500">
+                    Explore Work
+                  </span>
                   <MoveRight
-                    size={22}
-                    className="group-hover:translate-x-1 transition-transform"
+                    size={16}
+                    className="group-hover:translate-x-2 transition-transform duration-500"
                   />
                 </a>
                 <a
                   href="#contact"
-                  className="border-2 border-white/20 px-12 py-5 rounded-full font-black text-sm tracking-widest uppercase hover:bg-white/10 transition-all duration-300 hover:border-white"
+                  className="text-gray-600 hover:text-white font-black text-xs tracking-widest uppercase transition-colors duration-500"
                 >
-                  Get In Touch
+                  Contact Studio
                 </a>
               </motion.div>
             </div>
@@ -99,21 +108,11 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-        <span className="text-[10px] uppercase tracking-[0.6em] text-gray-500 font-black animate-pulse">
-          Scroll Down
-        </span>
-        <motion.div
-          animate={{ y: [0, 12, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-px h-24 bg-linear-to-b from-primary via-secondary to-transparent"
-        />
-      </div>
+      {/* Subtle Noise Overlay */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
 
-      {/* Background Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 blur-[180px] rounded-full -z-1" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 blur-[180px] rounded-full -z-1" />
+      {/* Refined Ambient Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
     </section>
   );
 };

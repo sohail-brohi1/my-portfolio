@@ -22,17 +22,17 @@ const About = () => {
               </span>
               <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter">
                 I'M A <span className="text-secondary">FULL-STACK</span> <br />
-                <span className="text-white">DEVELOPER</span> <br />
+                <span className="text-white">ENGINEER</span> <br />
                 FROM PAKISTAN.
               </h2>
             </Text3D>
 
             <p className="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed font-medium max-w-xl">
-              I'm {personalInfo.name}, a passionate developer based in{" "}
-              {personalInfo.location}. My journey in the tech world has been
-              driven by a relentless desire to create innovative solutions that
-              bridge the gap between complex problems and user-friendly digital
-              experiences.
+              I&apos;m {personalInfo.name}, a passionate Engineer with a Degree
+              in Information Technology based in {personalInfo.location}. My
+              journey in the tech world has been driven by a relentless desire
+              to create innovative solutions that bridge the gap between complex
+              problems and user-friendly digital experiences.
             </p>
             <p className="text-gray-400 text-lg md:text-xl mb-12 leading-relaxed font-medium max-w-xl">
               With a strong foundation in the MERN stack and hands-on experience
@@ -44,27 +44,33 @@ const About = () => {
             <div className="space-y-12">
               <div className="flex flex-wrap gap-12">
                 <div className="group cursor-default">
-                  <span className="text-4xl font-black text-primary block mb-2 group-hover:scale-110 transition-transform duration-300 uppercase">
-                    MERN
-                  </span>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
-                    Core Stack
-                  </p>
-                </div>
-                <div className="group cursor-default">
-                  <span className="text-4xl font-black text-secondary block mb-2 group-hover:scale-110 transition-transform duration-300 uppercase">
-                    Next.js
-                  </span>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
-                    Frontend
-                  </p>
-                </div>
-                <div className="group cursor-default">
-                  <span className="text-4xl font-black text-accent block mb-2 group-hover:scale-110 transition-transform duration-300 uppercase">
-                    Mobile
-                  </span>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
+                  <span className="text-3xl font-black text-primary block mb-2 group-hover:scale-110 transition-transform duration-300 uppercase leading-tight">
+                    Website
+                    <br />
                     Development
+                  </span>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
+                    Expertise
+                  </p>
+                </div>
+                <div className="group cursor-default">
+                  <span className="text-3xl font-black text-secondary block mb-2 group-hover:scale-110 transition-transform duration-300 uppercase leading-tight">
+                    App
+                    <br />
+                    Development
+                  </span>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
+                    Solutions
+                  </p>
+                </div>
+                <div className="group cursor-default">
+                  <span className="text-3xl font-black text-accent block mb-2 group-hover:scale-110 transition-transform duration-300 uppercase leading-tight">
+                    DevOps
+                    <br />
+                    Architecture
+                  </span>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
+                    Operations
                   </p>
                 </div>
               </div>

@@ -8,7 +8,7 @@ export const navLinks = [
 
 export const personalInfo = {
   name: "Muhammad Sohail",
-  role: "Full-stack web & mobile app developer",
+  role: "Full-stack web & mobile app Engineer",
   headline: "Crafting Innovative Solutions for Tomorrow’s IT Challenges",
   email: "sohailbrohi93@gmail.com",
   phone: "03253595050",
@@ -18,18 +18,76 @@ export const personalInfo = {
 };
 
 export const skills = [
-  { name: "Next.js", icon: "/icons/nextjs.svg" },
-  { name: "React Native", icon: "/icons/react.svg" },
-  { name: "MongoDB", icon: "/icons/mongodb.svg" },
-  { name: "Express.js", icon: "/icons/express.svg" },
-  { name: "Node.js", icon: "/icons/nodejs.svg" },
-  { name: "TypeScript", icon: "/icons/typescript.svg" },
-  { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
-  { name: "Framer Motion", icon: "/icons/framer.svg" },
-  { name: "Three.js", icon: "/icons/threejs.svg" },
-  { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
-  { name: "Firebase", icon: "/icons/firebase.svg" },
-  { name: "Docker", icon: "/icons/docker.svg" },
+  {
+    name: "Next.js",
+    desc: "Architecting high-performance server-side rendered applications with the latest App Router patterns.",
+    icon: "/icons/nextjs.svg",
+  },
+  {
+    name: "React.js",
+    desc: "Building dynamic, component-driven user interfaces with advanced state management and hooks.",
+    icon: "/icons/react.svg",
+  },
+  {
+    name: "JavaScript",
+    desc: "Mastering core language mechanics, asynchronous patterns, and modern ES6+ functional programming.",
+    icon: "/icons/javascript.svg",
+  },
+  {
+    name: "React Native",
+    desc: "Developing native-feel mobile experiences for iOS and Android using a shared React codebase.",
+    icon: "/icons/react.svg",
+  },
+  {
+    name: "MongoDB",
+    desc: "Designing flexible NoSQL schemas and optimizing document-based data structures for scale.",
+    icon: "/icons/mongodb.svg",
+  },
+  {
+    name: "Express.js",
+    desc: "Crafting robust, middleware-integrated REST APIs and server-side logic for the Node ecosystem.",
+    icon: "/icons/express.svg",
+  },
+  {
+    name: "Node.js",
+    desc: "Leveraging V8 engine performance for scalable backend services and event-driven architectures.",
+    icon: "/icons/nodejs.svg",
+  },
+  {
+    name: "TypeScript",
+    desc: "Implementing type-safe development workflows to ensure code reliability and better developer experience.",
+    icon: "/icons/typescript.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    desc: "Engineering pixel-perfect, responsive utility-first designs with a focus on design systems.",
+    icon: "/icons/tailwind.svg",
+  },
+  {
+    name: "Framer Motion",
+    desc: "Orchestrating production-grade layout animations and complex gesture-based interactions.",
+    icon: "/icons/framer.svg",
+  },
+  {
+    name: "Three.js",
+    desc: "Creating immersive 3D web environments and interactive WebGL experiences with React Three Fiber.",
+    icon: "/icons/threejs.svg",
+  },
+  {
+    name: "PostgreSQL",
+    desc: "Managing complex relational data with ACID compliance, advanced indexing, and performance tuning.",
+    icon: "/icons/postgresql.svg",
+  },
+  {
+    name: "Firebase",
+    desc: "Integrating real-time databases, authentication, and cloud functions for rapid app deployment.",
+    icon: "/icons/firebase.svg",
+  },
+  {
+    name: "Docker",
+    desc: "Containerizing applications to ensure environment consistency across development and production.",
+    icon: "/icons/docker.svg",
+  },
 ];
 
 export const projects = [
@@ -71,11 +129,11 @@ export const projects = [
 export const experiences = [
   {
     company: "CodeBotX",
-    role: "Full Stack Developer",
+    role: "Full Stack Engineer",
     duration: "July 2024 - Present",
     location: "Dera Ghazi Khan, Punjab, Pakistan",
     description:
-      "Passionate Full Stack MERN Developer dedicated to creating cutting-edge web solutions. Bridging creativity and technology to drive innovation and deliver exceptional user experiences.",
+      "Passionate Full Stack MERN Engineer dedicated to creating cutting-edge web solutions using React.js and JavaScript. Bridging creativity and technology to drive innovation and deliver exceptional user experiences.",
   },
   {
     company: "CodeBotX",
@@ -83,14 +141,21 @@ export const experiences = [
     duration: "August 2023 - July 2024",
     location: "Dera Ghazi Khan, Pakistan",
     description:
-      "Learned significantly about coding, work environment, writing better code, and work ethics. Promoted to Full Stack MERN developer with hands-on experience in Next.js.",
+      "Learned significantly about coding, work environment, writing better code in JavaScript, and work ethics. Promoted to Full Stack MERN Engineer with hands-on experience in React.js and Next.js.",
   },
 ];
 
 export const education = [
   {
     institution: "University of Education, Lahore",
-    degree: "Bachelor's Degree",
+    degree: "BS Information Technology",
     duration: "2021 - 2025",
   },
+];
+
+export const stats = [
+  { label: "Years Experience", value: "2+" },
+  { label: "Projects Completed", value: "15+" },
+  { label: "Happy Clients", value: "10+" },
+  { label: "Technology Stack", value: "12+" },
 ];

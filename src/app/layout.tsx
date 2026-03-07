@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Quantum | Developer Portfolio",
+  title: "SohailForge | Crafting Modern Web Experiences",
   description:
-    "A high-end, immersive, 3D developer portfolio built with Next.js, Three.js, and Framer Motion.",
+    "A high-end, immersive, 3D engineer portfolio by SohailBrohi. Specializing in Next.js, Three.js, and futuristic web design.",
 };
 
 export default function RootLayout({

@@ -1,63 +1,61 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useSpring } from "framer-motion";
 
 const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
+  const cursorX = useSpring(0, { stiffness: 500, damping: 35 });
+  const cursorY = useSpring(0, { stiffness: 500, damping: 35 });
+
   useEffect(() => {
-    const onMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    const moveCursor = (e: MouseEvent) => {
+      cursorX.set(e.clientX);
+      cursorY.set(e.clientY);
     };
 
-    const onMouseOver = (e: MouseEvent) => {
+    const handleHover = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (
-        target.tagName === "A" ||
-        target.tagName === "BUTTON" ||
-        target.closest("button") ||
-        target.closest("a")
-      ) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
+      const isClickable = target.closest("a, button, [role='button']");
+      setIsHovering(!!isClickable);
     };
 
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("mouseover", onMouseOver);
+    window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mouseover", handleHover);
 
     return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseover", onMouseOver);
+      window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("mouseover", handleHover);
     };
-  }, []);
+  }, [cursorX, cursorY]);
 
   return (
-    <>
+    <motion.div
+      className="fixed top-0 left-0 pointer-events-none z-9999 flex items-center justify-center mix-blend-difference"
+      style={{
+        x: cursorX,
+        y: cursorY,
+        translateX: "-50%",
+        translateY: "-50%",
+      }}
+    >
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-primary pointer-events-none z-9999"
         animate={{
-          x: position.x - 16,
-          y: position.y - 16,
-          scale: isHovering ? 1.5 : 1,
-          backgroundColor: isHovering
-            ? "rgba(0, 242, 255, 0.1)"
-            : "transparent",
+          width: isHovering ? 60 : 8,
+          height: isHovering ? 60 : 8,
+          borderWidth: isHovering ? "1px" : "4px",
         }}
-        transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.5 }}
+        className="rounded-full border-primary bg-primary/0"
+        transition={{ type: "spring", stiffness: 150, damping: 20 }}
       />
+
+      {/* Tiny Core Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-primary rounded-full pointer-events-none z-9999"
-        animate={{
-          x: position.x - 4,
-          y: position.y - 4,
-        }}
-        transition={{ type: "spring", stiffness: 500, damping: 28, mass: 0.2 }}
+        animate={{ scale: isHovering ? 0 : 1 }}
+        className="absolute w-1 h-1 bg-primary rounded-full"
       />
-    </>
+    </motion.div>
   );
 };
 

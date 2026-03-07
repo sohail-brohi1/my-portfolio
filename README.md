@@ -1,6 +1,6 @@
-# Quantum | Immersive Developer Portfolio
+# SohailForge | Immersive Engineer Portfolio
 
-A high-end, futuristic 3D developer portfolio built with a focus on immersive user experience and smooth animations. This project leverages **Next.js**, **Three.js**, and **Framer Motion** to create a premium, interactive environment.
+A high-end, futuristic 3D engineer portfolio built with a focus on immersive user experience and smooth animations. This project leverages **Next.js**, **Three.js**, and **Framer Motion** to create a premium, interactive environment.
 
 ## 🚀 Teck Stack
 
