@@ -182,7 +182,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="glass p-8 md:p-12 rounded-[2.5rem] border-white/5 relative bg-white/[0.01]"
+            className="glass p-8 md:p-12 rounded-[2.5rem] border-white/5 relative bg-white/1"
           >
             {isSuccess ? (
               <div className="text-center py-20 flex flex-col items-center">

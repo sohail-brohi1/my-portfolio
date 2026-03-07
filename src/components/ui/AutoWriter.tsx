@@ -58,7 +58,7 @@ const AutoWriter: React.FC<AutoWriterProps> = ({
     >
       {letters.map((letter, index) => (
         <motion.span
-          variants={child}
+          variants={child as any}
           key={index}
           style={{ display: "inline-block", whiteSpace: "pre" }}
         >

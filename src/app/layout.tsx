@@ -36,7 +36,7 @@ export default function RootLayout({
           <CanvasScene />
           <CustomCursor />
           <Navbar />
-          <main className="relative z-10 w-full overflow-x-hidden">
+          <main className="relative z-10 w-full overflow-x-hidden pt-36">
             {children}
           </main>
         </RootLayoutClient>
