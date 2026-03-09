@@ -6,10 +6,11 @@ import { personalInfo } from "@/data";
 import Text3D from "@/components/ui/Text3D";
 import AutoWriter from "@/components/ui/AutoWriter";
 import Typewriter from "@/components/ui/Typewriter";
+import Magnetic from "@/components/ui/Magnetic";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto flex items-center justify-center overflow-hidden bg-[#050505]">
+    <section className="relative w-full h-screen mx-auto flex items-center justify-center overflow-hidden bg-transparent">
       <div className="container-custom z-10 perspective-distant">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,24 +85,28 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 1.5 }}
                 className="flex flex-wrap gap-12"
               >
-                <a
-                  href="#projects"
-                  className="relative group flex items-center gap-4 text-white font-black text-xs tracking-widest uppercase overflow-hidden"
-                >
-                  <span className="pb-1 border-b-2 border-primary group-hover:border-white transition-colors duration-500">
-                    Explore Work
-                  </span>
-                  <MoveRight
-                    size={16}
-                    className="group-hover:translate-x-2 transition-transform duration-500"
-                  />
-                </a>
-                <a
-                  href="#contact"
-                  className="text-gray-600 hover:text-white font-black text-xs tracking-widest uppercase transition-colors duration-500"
-                >
-                  Contact Studio
-                </a>
+                <Magnetic>
+                  <a
+                    href="#projects"
+                    className="relative group flex items-center gap-4 text-white font-black text-xs tracking-widest uppercase overflow-hidden p-4"
+                  >
+                    <span className="pb-1 border-b-2 border-primary group-hover:border-white transition-colors duration-500">
+                      Explore Work
+                    </span>
+                    <MoveRight
+                      size={16}
+                      className="group-hover:translate-x-2 transition-transform duration-500"
+                    />
+                  </a>
+                </Magnetic>
+                <Magnetic>
+                  <a
+                    href="#contact"
+                    className="text-gray-600 hover:text-white font-black text-xs tracking-widest uppercase transition-colors duration-500 p-4"
+                  >
+                    Contact Studio
+                  </a>
+                </Magnetic>
               </motion.div>
             </div>
           </Text3D>

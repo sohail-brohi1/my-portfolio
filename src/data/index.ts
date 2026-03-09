@@ -129,11 +129,11 @@ export const projects = [
 export const experiences = [
   {
     company: "CodeBotX",
-    role: "Full Stack Engineer",
+    role: "Full Stack & Mobile Engineer",
     duration: "July 2024 - Present",
     location: "Dera Ghazi Khan, Punjab, Pakistan",
     description:
-      "Passionate Full Stack MERN Engineer dedicated to creating cutting-edge web solutions using React.js and JavaScript. Bridging creativity and technology to drive innovation and deliver exceptional user experiences.",
+      "Leading the development of high-performance web and mobile applications. With 2 years of specialized experience in React Native, I architect cross-platform solutions that deliver seamless native experiences and robust backend integrations.",
   },
   {
     company: "CodeBotX",
@@ -141,7 +141,7 @@ export const experiences = [
     duration: "August 2023 - July 2024",
     location: "Dera Ghazi Khan, Pakistan",
     description:
-      "Learned significantly about coding, work environment, writing better code in JavaScript, and work ethics. Promoted to Full Stack MERN Engineer with hands-on experience in React.js and Next.js.",
+      "Started my professional journey focusing on MERN stack and Mobile development. Built a strong foundation in JavaScript and React Native, contributing to multiple production-ready applications and mastering work environment ethics.",
   },
 ];
 
@@ -155,7 +155,7 @@ export const education = [
 
 export const stats = [
   { label: "Years Experience", value: "2+" },
-  { label: "Projects Completed", value: "15+" },
-  { label: "Happy Clients", value: "10+" },
+  { label: "Mobile Apps Built", value: "5+" },
+  { label: "Web Solutions", value: "10+" },
   { label: "Technology Stack", value: "12+" },
 ];

@@ -1,13 +1,32 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { personalInfo, education } from "@/data";
 import Text3D from "@/components/ui/Text3D";
 
 const About = () => {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { left, top } = e.currentTarget.getBoundingClientRect();
+    setMousePos({ x: e.clientX - left, y: e.clientY - top });
+  };
+
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
-      <div className="container-custom [perspective:1000px]">
+    <section
+      id="about"
+      className="py-32 relative overflow-hidden"
+      onMouseMove={handleMouseMove}
+    >
+      {/* Dynamic Spotlight */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 opacity-10 transition-opacity duration-500"
+        style={{
+          background: `radial-gradient(1000px circle at ${mousePos.x}px ${mousePos.y}px, rgba(0, 242, 255, 0.15), transparent 80%)`,
+        }}
+      />
+      <div className="container-custom [perspective:1000px] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -21,7 +40,7 @@ const About = () => {
                 My Story
               </span>
               <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter">
-                I'M A <span className="text-secondary">FULL-STACK</span> <br />
+                I'M A <span className="text-secondary">WEB & MOBILE</span> <br />
                 <span className="text-white">ENGINEER</span> <br />
                 FROM PAKISTAN.
               </h2>
@@ -31,14 +50,14 @@ const About = () => {
               I&apos;m {personalInfo.name}, a passionate Engineer with a Degree
               in Information Technology based in {personalInfo.location}. My
               journey in the tech world has been driven by a relentless desire
-              to create innovative solutions that bridge the gap between complex
-              problems and user-friendly digital experiences.
+              to create innovative solutions that bridge the gap between web ecosystems and 
+              immersive mobile experiences.
             </p>
             <p className="text-gray-400 text-lg md:text-xl mb-12 leading-relaxed font-medium max-w-xl">
-              With a strong foundation in the MERN stack and hands-on experience
-              in Next.js, I focus on building robust applications. Currently,
+              With a strong foundation in the MERN stack and expertise in React Native, 
+              I focus on building robust, high-performance applications. Currently,
               I'm contributing my skills at CodeBotX and constantly pushing the
-              boundaries of what's possible in the IT landscape.
+              boundaries of what's possible in cross-platform development.
             </p>
 
             <div className="space-y-12">
